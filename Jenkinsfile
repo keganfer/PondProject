@@ -16,7 +16,7 @@ pipeline {
         stage('Compile') {
             steps {
                 echo 'Compiling Source code ...'
-                sh 'mvn compile -f "backend"'
+                sh 'mvn clean compile -f "backend"'
             }
         }
 
@@ -35,16 +35,10 @@ pipeline {
         }
 
 
-        stage('Deploy') {
+        stage('Execute') {
             steps {
-                echo 'Deploying....'
-                script {
-                    docker.withRegistry('','Docker_Access_Token') {
-                        def RatImage = docker.build("my-image: ${env.Build_ID}")
-                        // Push the container to the custom Registry
-                        RatImage.push()
-                    }
-                }
+                echo 'executing'
+
 
             }
         }
