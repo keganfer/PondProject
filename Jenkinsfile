@@ -33,12 +33,21 @@ pipeline {
                 sh 'mvn package -B -T 2.0C -DskipTests -f "backend"'
             }
         }
+        stage('Dock push') {
+            steps {
+                sh 'docker build -t lutokepondproject .'
+			    sh 'docker tag lutokepondproject:latest keganferreira/lutokepondproject:latest'
+				withDockerRegistry([ credentialsId: 'DockerCreds', url: '' ]) {
+			    sh 'docker push keganferreira/lutokepondproject'
+				}
 
+            }
+        }
 
         stage('Execute') {
             steps {
                 echo 'executing'
-
+    
 
             }
         }
