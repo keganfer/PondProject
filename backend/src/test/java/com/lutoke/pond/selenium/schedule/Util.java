@@ -1,4 +1,4 @@
-package com.fdm.pond.selenium.schedule;
+package com.lutoke.pond.selenium.schedule;
 
 import java.io.File;
 

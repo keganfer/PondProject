@@ -1,16 +1,16 @@
-package com.fdm.pond.controller;
-
-import com.fdm.pond.model.employee.Consultant;
-import com.fdm.pond.model.employee.Skill;
-import com.fdm.pond.model.opportunity.Opportunity;
-import com.fdm.pond.model.schedule.ScheduleEntry;
-import com.fdm.pond.repository.*;
+package com.lutoke.pond.controller;
 
 import lombok.extern.log4j.Log4j2;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+
+import com.lutoke.pond.model.employee.Consultant;
+import com.lutoke.pond.model.employee.Skill;
+import com.lutoke.pond.model.opportunity.Opportunity;
+import com.lutoke.pond.model.schedule.ScheduleEntry;
+import com.lutoke.pond.repository.*;
 
 import java.text.ParseException;
 import java.util.*;

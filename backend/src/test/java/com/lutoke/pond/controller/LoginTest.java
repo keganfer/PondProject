@@ -1,4 +1,4 @@
-package com.fdm.pond.controller;
+package com.lutoke.pond.controller;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -8,12 +8,13 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import com.fdm.pond.security.JwtResponse;
-import com.fdm.pond.model.employee.Employee;
-import com.fdm.pond.repository.EmployeeRepository;
-import com.fdm.pond.security.EmployeeDetailsService;
-import com.fdm.pond.security.JwtRequest;
-import com.fdm.pond.security.JwtTokenUtil;
+
+import com.lutoke.pond.model.employee.Employee;
+import com.lutoke.pond.repository.EmployeeRepository;
+import com.lutoke.pond.security.EmployeeDetailsService;
+import com.lutoke.pond.security.JwtRequest;
+import com.lutoke.pond.security.JwtResponse;
+import com.lutoke.pond.security.JwtTokenUtil;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
