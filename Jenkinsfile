@@ -38,9 +38,7 @@ pipeline {
         stage('Execute') {
             steps {
                 echo 'executing'
-                script {
-                    sh 'docker-compose up -d'
-                }
+
 
             }
         }
