@@ -15,4 +15,6 @@ services:
     ports:
       - 8088:8088
     volumes:
-      - ./backend/data: /app/data
+    - type: volume
+      source: ./backend/data
+      target: /app/data
